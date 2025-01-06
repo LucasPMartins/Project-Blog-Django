@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.forms import ModelForm
+from django.http import HttpRequest
 from blog.models import Tag,Category,Page,Post
 
 # Register your models here.
@@ -46,3 +48,12 @@ class PostAdmin(admin.ModelAdmin):
         "slug": ('title',),
     }
     autocomplete_fields = 'tags', 'category',
+
+    def save_model(self, request: HttpRequest, obj, form: ModelForm, change: bool) -> None:
+        if change:
+            obj.updated_by = request.user
+        else:
+            obj.created_by = request.user
+            obj.updated_by = request.user
+
+        obj.save()
