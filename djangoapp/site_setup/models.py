@@ -29,7 +29,7 @@ class SiteSetup(models.Model):
     description = models.CharField(max_length=255)
 
     show_header = models.BooleanField(default=True)
-    show_seach = models.BooleanField(default=True)
+    show_search = models.BooleanField(default=True)
     show_menu = models.BooleanField(default=True)
     show_description = models.BooleanField(default=True)
     show_pagination = models.BooleanField(default=True)
