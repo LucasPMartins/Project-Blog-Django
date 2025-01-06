@@ -1,5 +1,6 @@
 from django.db import models
 from utils.rands import new_slugify
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Tag(models.Model):
@@ -80,7 +81,16 @@ class Post(models.Model):
         help_text="If checked, the cover will be displayed in the post content"
         )
     created_at = models.DateTimeField(auto_now_add=True)
+    # user.post_created_by.all()
+    created_by = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True,
+        blank=True,related_name='post_created_by',
+        )
     updated_at = models.DateTimeField(auto_now=True)
+    updated_by = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True,
+        blank=True,related_name='post_updated_by',
+        )
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True,
         blank=True,default=None,
