@@ -38,7 +38,7 @@ def created_by(request, author_pk):
     user_full_name = user.username
     if user.first_name:
         user_full_name = f'{user.first_name} {user.last_name}'
-    page_title = 'Posts de ' + user_full_name + ' - '
+    page_title = 'Posts of ' + user_full_name + ' - '
 
     return render(
         request,
