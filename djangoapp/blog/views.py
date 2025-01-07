@@ -1,4 +1,4 @@
-from blog.models import Post,Post
+from blog.models import Post,Page
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.db.models import Q
@@ -89,7 +89,7 @@ def search(request):
 
 def page(request, slug):
     page = (
-        Post.objects.filter(is_published=True).filter(slug=slug).first()
+        Page.objects.filter(is_published=True).filter(slug=slug).first()
     )
     return render(
         request,

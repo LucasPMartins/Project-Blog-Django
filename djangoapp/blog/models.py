@@ -72,10 +72,15 @@ class Page(models.Model):
         max_length=100, unique=True, 
         default=None, null=True, blank=True
         )
-    content = models.TextField()
     is_published = models.BooleanField(default=False,help_text="If checked, the page will be visible to users")
+    content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        if not self.is_published:
+            return reverse('blog:index')
+        return reverse("blog:page", args=(self.slug,))
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -84,11 +89,6 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
-    
-    def get_absolute_url(self):
-        if not self.is_published:
-            return reverse('blog:index')
-        return reverse("blog:page", args=(self.slug,))
 
 class PostManager(models.Manager):
     def get_published(self):
