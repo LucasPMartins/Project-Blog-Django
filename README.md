@@ -2,11 +2,61 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&color=1e81b0&size=45&center=true&vCenter=true&width=1000&lines=Project+Blog)](https://git.io/typing-svg)
 
+## 📖 Project Description
+This is a Django-based blog project where users can create, edit, and delete posts. The blog supports categorization and tagging of posts, and includes pagination for easy navigation through posts.
 
-## 👨‍💻 Languages
+## 🚀 Features
+- User authentication and authorization
+- Create, edit, and delete blog posts
+- Categorize and tag posts
+- Pagination for posts
+
+## 👨‍💻 Languages and Technologies
 ![Python](https://img.shields.io/badge/python-0D1117?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Django](https://img.shields.io/badge/django-0D1117?style=for-the-badge&logo=django&logoColor=092E20)
 ![CSS3](https://img.shields.io/badge/css3-0D1117?style=for-the-badge&logo=css3&logoColor=%231572B6)
 ![HTML5](https://img.shields.io/badge/html5-0D1117?style=for-the-badge&logo=html5&logoColor=%23E34F26)
 
+## 🛠️ Setup and Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/LucasPMarstins/Project-Blog-Django.git
+    cd Project-Blog-Django
+    ```
+
+2. Create and activate a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Apply migrations:
+    ```bash
+    python manage.py migrate
+    ```
+
+5. Run the development server:
+    ```bash
+    python manage.py runserver
+    ```
+
+6. Open your browser and go to `http://127.0.0.1:8000/` to see the blog.
+
+### Using Docker
+
+1. Build and Run the Docker image:
+    ```bash
+    docker-compose up --build --remove-orphans --renew-anon-volumes --force-recreate
+    ```
+
+2. Open your browser and go to `http://127.0.0.1:8000/` to see the blog.
+
+
+## 📸 Screenshots
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=1e81b0&height=120&section=footer"/>
