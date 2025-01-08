@@ -100,7 +100,7 @@ class Post(models.Model):
         verbose_name_plural = "Posts"
 
     objects = PostManager()
-    
+
     title = models.CharField(max_length=65)
     slug = models.SlugField(
         max_length=100, unique=True, 
