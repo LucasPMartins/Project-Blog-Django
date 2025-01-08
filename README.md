@@ -16,11 +16,12 @@ This is a Django-based blog project where users can create, edit, and delete pos
 ![Django](https://img.shields.io/badge/django-0D1117?style=for-the-badge&logo=django&logoColor=092E20)
 ![CSS3](https://img.shields.io/badge/css3-0D1117?style=for-the-badge&logo=css3&logoColor=%231572B6)
 ![HTML5](https://img.shields.io/badge/html5-0D1117?style=for-the-badge&logo=html5&logoColor=%23E34F26)
+![Docker](https://img.shields.io/badge/docker-0D1117?style=for-the-badge&logo=docker&logoColor=%230db7ed)
 
 ## 🛠️ Setup and Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/LucasPMarstins/Project-Blog-Django.git
+    git clone https://github.com/LucasPMartins/Project-Blog-Django.git
     cd Project-Blog-Django
     ```
 
