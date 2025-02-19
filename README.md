@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&color=1e81b0&size=45&center=true&vCenter=true&width=1000&lines=Project+Blog)](https://git.io/typing-svg)
 
 ## 📖 Project Description
-This project is a comprehensive Django-based blog application developed as part of the "Python 3 Completo" course on Udemy, instructed by Professor Luiz Otávio. The application allows users to create, edit, and delete blog posts, categorize and tag posts, and navigate through posts with pagination. It also includes user authentication and authorization features, making it a robust and secure platform for blogging.
+This project is Django-based blog application. The application allows users to create, edit, and delete blog posts, categorize and tag posts, and navigate through posts with pagination. It also includes user authentication and authorization features, making it a robust and secure platform for blogging.
 
 ## 🚀 Features
 - User authentication and authorization
